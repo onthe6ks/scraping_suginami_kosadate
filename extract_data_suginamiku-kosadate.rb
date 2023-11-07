@@ -16,7 +16,7 @@ URL_LIST = ["https://www.city.suginami.tokyo.jp/kosodate/ouenken/jigyousya/a/ind
 "https://www.city.suginami.tokyo.jp/kosodate/ouenken/jigyousya/ra/index.html",
 "https://www.city.suginami.tokyo.jp/kosodate/ouenken/jigyousya/wa/index.html"]
 
-#URL_LIST = ["https://www.city.suginami.tokyo.jp/kosodate/ouenken/jigyousya/ya/index.html"]
+URL_LIST = ["https://www.city.suginami.tokyo.jp/kosodate/ouenken/jigyousya/ya/index.html"]
 
 # 指定されたURL
 
@@ -146,12 +146,15 @@ end
 shops = []
 
 shopTitleUrls.each do |shopTitleUrl|
-    shops << getShop(shopTitleUrl)
+    #shops << getShop(shopTitleUrl)
+    pp getShop(shopTitleUrl)
 end
 
-puts "title,事業者名,住所,URLl"
+=begin
+
+puts "title,事業者名,住所,URL,住所"
 shops.each do |shop|
   puts "#{shop["title"]},#{shop["事業者名"]},#{shop["住所"]},#{shop["URL"]},#{correct_address(shop["住所"])}"
 end
 
-
+=end
